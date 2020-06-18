@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AsyncSocketClient.MainPage">
+
+    <StackLayout HorizontalOptions="Fill" VerticalOptions="Fill" Margin="0,40,0,40">
+        <!-- Place new controls here -->
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Start" Margin="0,16,0,16">
+            <Label x:Name="lblUseV6" Text="Use IPV6" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,0,8,0" />
+            <Switch x:Name="swUseV6" IsToggled="false" HorizontalOptions="Center" VerticalOptions="Center"  Toggled="swUseV6_Toggled"  />
+        </StackLayout>
+
+        <Label Text="Socket Client Test" HorizontalOptions="Center" VerticalOptions="Start" />
+        <Entry x:Name="txtMessage" Placeholder="Enter Message" HorizontalOptions="Fill" VerticalOptions="End" Margin="16,0,16,16" />
+        
+        <Label x:Name="lblResponseFromServer" Text="" HorizontalOptions="Center" VerticalOptions="Start" Margin="0,32,0,32" />
+        
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="EndAndExpand">
+            <Button x:Name="btnSend" Text="Send" Clicked="btnSend_Clicked"
+                HorizontalOptions="Center" VerticalOptions="End"/>
+            <Button x:Name="btnClear" Text="Clear" Clicked="btnClear_Clicked"
+                HorizontalOptions="Center" VerticalOptions="End"/>
+            <Button x:Name="btnEnd" Text="End" Clicked="btnEnd_Clicked"  
+                HorizontalOptions="Center" VerticalOptions="End"/>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>
